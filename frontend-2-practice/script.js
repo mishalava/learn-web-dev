@@ -65,3 +65,117 @@
 // }
 
 // Начните писать код здесь.
+
+/*window.onload = function() {
+  const day = document.getElementById('daysNumberRow2White')
+  day.style.background = '#74389F';
+  day.style.color = '#fff';
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const timeBlocks = document.querySelectorAll('.timeBlock');
+
+  timeBlocks.forEach(block => {
+    block.addEventListener('click', function() {
+        timeBlocks.forEach(b => b.classList.remove('active'));
+      this.classList.toggle('active'); 
+    });
+  });
+});
+*/
+
+(function () {
+    const monthLabel = document.getElementById('monthLabel');
+    const daysGrid   = document.getElementById('daysGrid');
+    const prevBtn    = document.getElementById('prevBtn');
+    const nextBtn    = document.getElementById('nextBtn');
+
+    const MONTHS = [
+        'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+    ];
+
+    // Старт: текущий месяц (или new Date(2026, 9, 1) для октября 2026)
+    let current = new Date();
+    current.setDate(1);
+
+    let selectedDate = null; // выбранный день (Date | null)
+
+    function render() {
+        const year  = current.getFullYear();
+        const month = current.getMonth();
+
+        monthLabel.textContent = `${MONTHS[month]} ${year}`;
+        daysGrid.innerHTML = '';
+
+        const jsFirstDay  = new Date(year, month, 1).getDay();
+        const offset      = (jsFirstDay + 6) % 7; // Пн = 0
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const daysInPrev  = new Date(year, month, 0).getDate();
+
+        const today = new Date();
+        const isCurrentMonth =
+            today.getFullYear() === year && today.getMonth() === month;
+
+        // дни предыдущего месяца
+        for (let i = offset - 1; i >= 0; i--) {
+            const d = document.createElement('div');
+            d.className = 'day other-month';
+            d.textContent = daysInPrev - i;
+            daysGrid.appendChild(d);
+        }
+
+        // дни текущего месяца
+        for (let day = 1; day <= daysInMonth; day++) {
+            const d = document.createElement('div');
+            d.className = 'day';
+            d.textContent = day;
+
+            if (isCurrentMonth && today.getDate() === day) {
+                d.classList.add('today');
+            }
+
+            if (
+                selectedDate &&
+                selectedDate.getFullYear() === year &&
+                selectedDate.getMonth() === month &&
+                selectedDate.getDate() === day
+            ) {
+                d.classList.add('selected');
+            }
+
+            d.addEventListener('click', () => {
+                selectedDate = new Date(year, month, day);
+                render();
+            });
+
+            daysGrid.appendChild(d);
+        }
+
+        // добиваем до полной строки
+        const remainder = daysGrid.children.length % 7;
+        if (remainder !== 0) {
+            for (let i = 1; i <= 7 - remainder; i++) {
+                const d = document.createElement('div');
+                d.className = 'day other-month';
+                d.textContent = i;
+                daysGrid.appendChild(d);
+            }
+        }
+    }
+
+    function goPrev() {
+        current.setMonth(current.getMonth() - 1);
+        render();
+    }
+
+    function goNext() {
+        current.setMonth(current.getMonth() + 1);
+        render();
+    }
+
+    prevBtn.addEventListener('click', goPrev);
+    nextBtn.addEventListener('click', goNext);
+
+    render();
+})();

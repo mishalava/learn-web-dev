@@ -1,14 +1,151 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <!-- Перенесите вашу верстку. Удалите статичные данные. Подключите скрипт -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><span>#МНОГОСТИЛЯ</span></div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Галерия</a></li>
+                <li><a href="#">Команда</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+
+    <div class="progress">
+        <div class="container">
+            <img src="img/Frame.svg" alt="">
+            <span id="master">Мастер</span>
+        </div>
+        <div class="container">
+            <img src="img/Frame (1).svg" alt="">
+            <span id="work">Услуга</span>
+        </div>
+        <div class="container">
+            <img src="img/Frame (2).svg" alt="">
+            <span id="dateTime">Дата и время</span>
+        </div>
+        <div class="container">
+            <img src="img/Frame (3).svg" alt="">
+            <span id="contact">Контакты</span>
+        </div>
+        <div class="container">
+            <img src="img/Frame (4).svg" alt="">
+            <span id="accept" >Подтверждение</span>
+        </div>
     </div>
-  </body>
+
+    <div class="hero">
+        <div class="heroMainText">
+            <span>< Назад </span>
+            <h3>Выберите дату и время</h3>
+        </div>
+
+        <div class="heroMainMenu">
+            <div class="date">
+                <div class="textDate">
+                    <h4 id="monthLabel">Октябрь 2026</h4>
+                    <div class="buttonsDate">
+                        <img src="img/Frame (5).svg" alt="prev" id="prevBtn">
+                        <img src="img/Frame (6).svg" alt="next" id="nextBtn">
+                    </div>
+                </div>
+
+                <div class="days">
+                    <p >Пн</p>
+                    <p >Вт</p>
+                    <p >Ср</p>
+                    <p >Чт</p>
+                    <p >Пт</p>
+                    <p >Сб</p>
+                    <p >Вс</p>
+                </div>
+
+                <div class="daysGrid" id="daysGrid"></div>
+
+            </div>
+            <div class="time">
+                <div class="textTime">
+                    <h4>Доступное время</h4>
+                </div>
+
+                <div class="times">
+                    <div class="timeBlock">
+                        <p>10:00</p>
+                    </div>
+
+                    <div class="timeBlock">
+                        <p id="timeP">11:00</p>
+                    </div>
+
+                    <div class="timeBlock">
+                        <p>12:00</p>
+                    </div>
+
+                    <div id = "timeBlockNot" class="timeBlock">
+                        <p id="timeP">13:00</p>
+                    </div>
+
+                    <div class="timeBlock">
+                        <p>14:00</p>
+                    </div>
+                    <div class="timeBlock">
+                        <p>15:00</p>
+                    </div>
+                    <div class="timeBlock">
+                        <p>16:00</p>
+                    </div>
+                    <div class="timeBlock">
+                        <p>17:00</p>
+                    </div>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="heroButton">
+            <button id = 'heroButton'>Продолжить</button> <!-- добавил id чтобы красить -->
+        </div>
+
+    </div>
+
+    </div>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="footerLogo">
+                <h3>#МНОГОСТИЛЯ</h3>
+                <p>У нас работают профессионалы</p>
+            </div>
+            <div class="contact">
+                <span>КОНТАКТЫ</span>
+                <div id = "adres" class="adres"><img src="img/Vector.svg" alt=""><p>ул. Садовая, 15, Москва</p></div>
+                <div id = "phone" class="phone"><img src="img/Vector (1).svg" alt=""><p>+7 (495) 123-45-67</p></div>
+            </div>
+            <div class="dateTime">
+                <span>РЕЖИМ РАБОТЫ</span>
+                <p>Пн–Пт: 9:00 – 21:00</p>
+                <p>Сб–Вс: 10:00 – 19:00</p>
+            </div>
+        </div>
+
+        <div class="footerContainerEnd">
+            <p>© 2026. Все права защищены.</p>
+            <p id="politika">Политика конфиденциальности</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
