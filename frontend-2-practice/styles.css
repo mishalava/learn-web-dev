@@ -380,18 +380,41 @@ footer{
     text-align: center;
 }
 
-.daysGrid .day{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.day-cell {
+    cursor: pointer;
     font-size: 12px;
-    padding: 7px 5px;
     font-weight: 500;
+    margin: 0;
+    text-align: center;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 7px 5px;
 }
 
-.daysGrid .day.today {
+.day-cell.today {
     background: #74389F;
     color: #fff;
-    font-weight: 600;
     border-radius: 15px;
+    font-weight: 500;
+    padding: 7px 5px;
+}
+
+.day-cell.past,
+.day-cell.disabled {
+  color: #b0b0b0;
+  cursor: default;
+  pointer-events: none;
+  background-color: #fff;
+
+    border-radius: 15px;
+    font-weight: 500;
+    padding: 5px 5px;
+}
+
+button.ready {
+  background-color: #74389F;
+  color: #fff;
+  border-color: #74389F;
 }
