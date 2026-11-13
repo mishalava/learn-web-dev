@@ -1,0 +1,417 @@
+/*-------------------------Общая настройка-------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    font-weight: 320;
+}
+
+*{
+    
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------Шапка------------------------------------*/
+
+header{
+    margin: 0 auto; 
+    width: 1024px;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F0F1F0;
+}
+
+nav ul {
+  display: flex;        
+  list-style: none;     
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+nav ul li a {
+  text-decoration: none; 
+  font-size: 14px;
+  color: #606666;
+  padding: 4px 8px;
+  transition: 0.3s all ease;
+}
+
+nav ul li a:hover{
+    color: #333333;
+}
+
+.logo span{
+    font-size: 24px;
+    font-weight: 550;
+    color: #7F7F7F;
+}
+
+.progress{
+    margin: 0 auto;
+    width: 1024px;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #F0F1F0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500;
+}
+
+/*---------------------Основное действие(hero)-----------------------*/
+
+.hero{
+    margin: 0 auto;
+    width: 1024px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+    background-color: #F5F5F3;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-bottom: 1px solid #F0F1F0;
+}
+
+.heroMainText{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+    height: 31px;
+}
+
+.heroMainText span{
+    font-size: 14px;
+    color: #606666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.heroMainText h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.heroMainMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    width: 928;
+    height: 320;
+}
+
+.date{
+    background-color: #fff;
+    width: 516px;
+    height: 330px;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.time{
+    background-color: #fff;
+    width: 380px;
+    height: 330px;
+    border-radius: 12px;
+}
+
+.date{
+    padding: 24px 24px
+}
+
+.textDate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 468;
+}
+
+.textDate h4{
+    margin: 0;
+}
+
+.buttonsDate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    
+}
+
+.buttonsDate img{
+    transition: all 0.3s ease;
+}
+
+.buttonsDate img:hover{
+    transform: scale(1.01);
+}
+
+.time{
+    padding: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.textTime{
+    display: flex;
+    align-items: center;
+}
+
+.textTime h4{
+    margin: 0;
+}
+
+
+.times{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.timeBlock{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #EBEBEB;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeBlock:hover{
+    background-color: #74389F;
+    color: #fff;
+}
+
+.timeBlock.active {
+  background-color: #74389F;
+  color: #fff;
+}
+
+button{
+    width: 170px;
+    height: 50px;
+    padding: 14px 36px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 14px;
+    border: 1px solid #EBEBEB;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+
+
+/*------------------------------------Подвал------------------------------*/
+
+footer{
+    margin: 0 auto;
+    background-color: #74389F;
+    width: 1024px;
+    height: 292px;
+    padding: 64px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+}
+
+
+
+.footerLogo p{
+    font-size: 14px;
+    color: #D9D9D9;
+    margin-top: 20px;
+}
+
+.footerLogo h3{
+    margin: 0px;
+    font-size: 24px;
+    color: #D9D9D9;
+}
+
+.contact, .dateTime{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact p, .dateTime p{
+    margin: 0px;
+    font-size: 14px;
+}
+
+.contact span,  .dateTime span {
+    margin: 0px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dateTime p{
+    color: #d9d9d9;
+}
+
+.adres, .phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.footerContainerEnd{
+    border-top: 2px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerContainerEnd p{
+    font-size: 13px;
+    color: #D9D9D9;
+    padding: 20px 0px;
+}
+
+/*---------------------------------Часть с Id--------------------------------*/
+
+#politika{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#politika:hover {
+    color:#333333;
+}
+
+#adres{
+    color: #d9d9d9;
+}
+#phone{
+    color: #fff; font-weight: 500;
+}
+
+#timeP{
+    color:#999999;
+}
+
+#timeBlockNot{
+    background-color: #F5F5F3;
+}
+
+
+
+#master{
+    color: #7F7F7F;
+}
+
+#work{
+    color: #7F7F7F;
+}
+
+#dateTime{
+    color: #74389F;
+}
+
+#contact{
+    color: #CCCCCC;
+}
+
+#accept{
+    color: #CCCCCC;
+}
+
+/* ---------------------- изменения с учетом требований на этапе с js------------------*/
+
+.daysGrid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.days{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.days p{
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+}
+
+.day-cell {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 7px 5px;
+}
+
+.day-cell.today {
+    background: #74389F;
+    color: #fff;
+    border-radius: 15px;
+    font-weight: 500;
+    padding: 7px 5px;
+}
+
+.day-cell.past,
+.day-cell.disabled {
+  color: #b0b0b0;
+  cursor: default;
+  pointer-events: none;
+  background-color: #fff;
+
+    border-radius: 15px;
+    font-weight: 500;
+    padding: 5px 5px;
+}
+
+button.ready {
+  background-color: #74389F;
+  color: #fff;
+  border-color: #74389F;
+}
